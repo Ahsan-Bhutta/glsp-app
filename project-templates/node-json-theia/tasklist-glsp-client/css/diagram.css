@@ -1,0 +1,53 @@
+/********************************************************************************
+ * Copyright (c) 2020 EclipseSource and others.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0 OR MIT
+ ********************************************************************************/
+
+svg {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb;
+}
+
+.sprotty-node {
+    fill: inherit;
+}
+
+.tasklist-node > .sprotty-node {
+    fill: #f1bd6c;
+}
+
+.category-node > .sprotty-node {
+    fill: #5c87bd;
+}
+
+.sprotty-edge.category-edge.low:not(.selected),
+.sprotty-edge.category-edge.low:not(.selected) .arrow {
+    stroke: rgb(128, 90, 233);
+}
+
+.sprotty-edge.category-edge.low:not(.selected) .arrow {
+    fill: rgb(128, 90, 233);
+}
+
+.sprotty-edge.category-edge:not(.selected),
+.sprotty-edge.category-edge:not(.selected) .arrow,
+.sprotty-edge.category-edge.medium:not(.selected),
+.sprotty-edge.category-edge.medium:not(.selected) .arrow {
+    stroke: rgb(98, 60, 193);
+}
+
+.sprotty-edge.category-edge:not(.selected) .arrow,
+.sprotty-edge.category-edge.medium:not(.selected) .arrow {
+    fill: rgb(98, 60, 193);
+}
+
+.sprotty-edge.category-edge.high:not(.selected),
+.sprotty-edge.category-edge.high:not(.selected) .arrow {
+    stroke: rgb(68, 30, 163);
+}
+
+.sprotty-edge.category-edge.high:not(.selected) .arrow {
+    fill: rgb(68, 30, 163);
+}

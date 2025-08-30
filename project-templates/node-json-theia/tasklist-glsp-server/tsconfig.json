@@ -1,0 +1,15 @@
+{
+  "extends": "@eclipse-glsp/ts-config",
+  "compilerOptions": {
+    "target": "ES2020",                  // 👈 ensures support for #private
+    "lib": ["ES2020", "DOM", "WebWorker"], // 👈 enables browser and worker types
+    "rootDir": "src",
+    "outDir": "lib",
+    "reactNamespace": "JSX",
+    "skipLibCheck": true,
+    "composite": true,
+    "sourceMap": true,
+    "types": []
+  },
+  "include": ["src"]
+}

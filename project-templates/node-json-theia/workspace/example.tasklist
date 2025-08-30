@@ -1,0 +1,65 @@
+{
+  "id": "601fc792-d05c-436d-a998-afbd74afe048",
+  "tasks": [
+    {
+      "id": "a104e0b1-03e5-472e-a7db-c20ca5e0c5ac",
+      "name": "TaskNode1",
+      "position": {
+        "x": 286.67994689941406,
+        "y": 97.00568389892578
+      },
+      "size": {
+        "width": 63.37120819091797,
+        "height": 22.121211051940918
+      }
+    },
+    {
+      "id": "200f19ba-e3c3-4b42-87fe-e1c2bd3ae057",
+      "name": "TaskNode2",
+      "position": {
+        "x": 104.67994689941406,
+        "y": 348.0056838989258
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "f2d4a03d-fe62-4d4d-a7e5-45280e51ac92",
+      "name": "Category0",
+      "position": {
+        "x": 124.67994689941406,
+        "y": 13.005683898925781
+      },
+      "size": {
+        "width": 59.341796875,
+        "height": 22.121211051940918
+      }
+    },
+    {
+      "id": "9f6dd724-ce30-40ec-b103-e1dbeae51e24",
+      "name": "Category1",
+      "position": {
+        "x": 368.7476806640625,
+        "y": 248.01619720458984
+      },
+      "size": {
+        "width": 59.22454071044922,
+        "height": 21.851852416992188
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "id": "b6d64a3a-b80c-4a92-95d5-064ba88e7eed",
+      "sourceTaskId": "f2d4a03d-fe62-4d4d-a7e5-45280e51ac92",
+      "targetTaskId": "a104e0b1-03e5-472e-a7db-c20ca5e0c5ac"
+    }
+  ],
+  "categoryEdges": [
+    {
+      "id": "85aa4b49-fd3e-4548-80d2-f5d6a9ea56de",
+      "sourceTaskId": "a104e0b1-03e5-472e-a7db-c20ca5e0c5ac",
+      "targetTaskId": "200f19ba-e3c3-4b42-87fe-e1c2bd3ae057"
+    }
+  ]
+}
