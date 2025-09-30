@@ -63,7 +63,7 @@ export class WorkflowNeo4jStorage extends AbstractJsonModelStorage {
                 const empty = { id: newUuid, type: 'graph', children: [] };
                 const root = this.modelSerializer.createRoot(empty);
                 this.modelState.updateRoot(root);
-                this.logger.info(`🆕 Created new WorkflowDiagram uuid=${newUuid}`);
+                this.logger.info(`Created new WorkflowDiagram uuid=${newUuid}`);
             }
         } finally {
             await session.close();
@@ -83,7 +83,7 @@ export class WorkflowNeo4jStorage extends AbstractJsonModelStorage {
                 await session.run(`MATCH (d:WorkflowDiagram {uuid: $uuid})-[:HAS_NODE]->(n) DETACH DELETE n`, { uuid: sourceUuid });
                 await session.run(`MATCH (d:WorkflowDiagram {uuid: $uuid})-[:HAS_EDGE]->(e) DETACH DELETE e`, { uuid: sourceUuid });
                 await session.run(`MATCH (d:WorkflowDiagram {uuid: $uuid}) DETACH DELETE d`, { uuid: sourceUuid });
-                this.logger.info(`🗑️ Deleted empty WorkflowDiagram uuid=${sourceUuid}`);
+                this.logger.info(`Deleted empty WorkflowDiagram uuid=${sourceUuid}`);
                 return;
             }
 
@@ -92,7 +92,7 @@ export class WorkflowNeo4jStorage extends AbstractJsonModelStorage {
                  SET d.json = $json`,
                 { uuid: sourceUuid, json }
             );
-            this.logger.info(`💾 Saved WorkflowDiagram uuid=${sourceUuid}`);
+            this.logger.info(`Saved WorkflowDiagram uuid=${sourceUuid}`);
 
             await session.run(`MATCH (d:WorkflowDiagram {uuid: $uuid})-[:HAS_NODE]->(n) DETACH DELETE n`, { uuid: sourceUuid });
             await session.run(`MATCH (d:WorkflowDiagram {uuid: $uuid})-[:HAS_EDGE]->(e) DETACH DELETE e`, { uuid: sourceUuid });
@@ -159,7 +159,7 @@ export class WorkflowNeo4jStorage extends AbstractJsonModelStorage {
                         }
                     );
 
-                    this.logger.info(`🔗 Saved Edge (${child.type}) id=${eid}`);
+                    this.logger.info(`Saved Edge (${child.type}) id=${eid}`);
                 }
             }
         } finally {
